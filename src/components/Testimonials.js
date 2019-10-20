@@ -1,59 +1,40 @@
 import React, { Component } from "react";
+import Client from "./Client";
 
 class Testimonials extends Component {
+
     render() {
         return (
             <section className="testimonials">
                 <h2 className="h2-universal">Kind words from our clients</h2>
                 <div className="carousel">
                     <div className="slider">
-                        <section>
-                            <img
-                                src={require("../resources/images/nigga.png")}
-                                alt="person"
-                            />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Necessitatibus amet aliquam
-                                pariatur explicabo quis ipsam ducimus porro
-                                doloremque similique.
-                            </p>
-                            <h4 className="name">Bob Wick</h4>
-                            <h4 className="title">
-                                CEO @ <span>Microsoft</span>
-                            </h4>
-                        </section>
-                        <section>
-                            <img
-                                src={require("../resources/images/nigga.png")}
-                                alt="person"
-                            />
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer
-                                adipisicing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam
-                            </p>
-                            <h4 className="name">Yuri Markov</h4>
-                            <h4 className="title">
-                                Marketing Director @ <span>FoFor</span>
-                            </h4>
-                        </section>
-                        <section>
-                            <img
-                                src={require("../resources/images/nigga.png")}
-                                alt="person"
-                            />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Tenetur omnis minus sequi! A
-                                iste voluptas necessitatibus iusto doloremque
-                                ipsam unde.
-                            </p>
-                            <h4 className="name">John Smith</h4>
-                            <h4 className="title">
-                                Android developer @ <span>Google</span>
-                            </h4>
-                        </section>
+                        <Client 
+                            text="Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Necessitatibus amet aliquam
+                            pariatur explicabo quis ipsam ducimus porro
+                            doloremque similique."
+                            name="Bob Wick"
+                            title="CEO"
+                            company="Microsoft"
+                        />
+                        <Client 
+                            text="Lorem ipsum dolor sit amet, consectetuer
+                            adipisicing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam."
+                            name="Yuri Markov"
+                            title="Marketing Director"
+                            company="FoFor"
+                        />
+                        <Client 
+                            text="Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Tenetur omnis minus sequi! A
+                            iste voluptas necessitatibus iusto doloremque
+                            ipsam unde."
+                            name="John Smith"
+                            title="Android developer"
+                            company="Google"
+                        />
                     </div>
                     <div className="control">
                         <svg

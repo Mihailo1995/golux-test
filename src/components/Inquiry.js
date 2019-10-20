@@ -1,6 +1,23 @@
 import React, { Component } from "react";
+import { featureData } from "../data/featureData";
+import Services from "./Services";
 
 class Inquiry extends Component {
+    state = {
+        // objekat fields u kom skladistim podatke iz input polja
+        fields: {},
+        // objekat errors u kom skladistim error poruke
+        errors: {},
+    }
+    
+    onChangeHandler = (e) => {
+        let fields = this.state.fields;
+        fields[e.target.name] = e.target.value;
+        this.setState({
+            fields
+        });
+    }
+
     render() {
         return (
             <section className="inquiry">
@@ -66,50 +83,8 @@ class Inquiry extends Component {
                         </div>
                         <div className="services-div">
                             <h3 className="h3-universal">Services</h3>
-                            <div className="services">
-                                <div className="group">
-                                    <img
-                                        src={require("../resources/icons/feature-1.png")}
-                                        alt="feature-1"
-                                    />
-                                    <h4>Backend</h4>
-                                </div>
-                                <div className="group">
-                                    <img
-                                        src={require("../resources/icons/feature-2.png")}
-                                        alt="feature-2"
-                                    />
-                                    <h4>Frontend</h4>
-                                </div>
-                                <div className="group">
-                                    <img
-                                        src={require("../resources/icons/feature-3.png")}
-                                        alt="feature-3"
-                                    />
-                                    <h4>Mobile dev</h4>
-                                </div>
-                                <div className="group">
-                                    <img
-                                        src={require("../resources/icons/feature-4.png")}
-                                        alt="feature-4"
-                                    />
-                                    <h4>Design</h4>
-                                </div>
-                                <div className="group">
-                                    <img
-                                        src={require("../resources/icons/feature-5.png")}
-                                        alt="feature-5"
-                                    />
-                                    <h4>Marketing & SEO</h4>
-                                </div>
-                                <div className="group">
-                                    <img
-                                        src={require("../resources/icons/feature-6.png")}
-                                        alt="feature-6"
-                                    />
-                                    <h4>Business dev</h4>
-                                </div>
-                            </div>
+                            <Services data={featureData.third} />
+                            
                         </div>
                     </div>
                     <button className="send-btn">Send Inquiry</button>

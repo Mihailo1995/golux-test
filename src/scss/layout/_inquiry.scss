@@ -266,7 +266,9 @@
             }
 
             .group img {
-                height: 14rem;
+                @include respond(768) {
+                    height: 14rem;
+                }
             }
         }
 

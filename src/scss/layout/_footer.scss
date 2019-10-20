@@ -36,6 +36,7 @@
 
         img.back-to-top {
             width: 6rem;
+            cursor: pointer;
 
             @include respond(768) {
                 display: none;

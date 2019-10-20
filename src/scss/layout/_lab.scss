@@ -115,7 +115,7 @@
                         align-items: center;
 
                         &::before {
-                            margin-right: 2rem;
+                            margin-right: 0.2rem;
                             display: inline-block;
                             content: "";
                             width: 12px;
@@ -123,6 +123,10 @@
                             background-image: url("../resources/icons/blue-check.svg");
                             background-size: cover;
                             background-position: center;
+
+                            @include respond(768) {
+                                margin-right: 2rem;
+                            }
                         }
                     }
                 }

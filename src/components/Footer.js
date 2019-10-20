@@ -1,7 +1,44 @@
 import React, { Component } from "react";
 
 class Footer extends Component {
+    state = {
+        intervalId: 0
+    };
+
+    scrollStep() {
+        if (window.pageYOffset === 0) {
+            clearInterval(this.state.intervalId);
+        }
+        window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+    }
+
+    scrollToTop() {
+        let intervalId = setInterval(
+            this.scrollStep.bind(this),
+            this.props.delayInMs
+        );
+        this.setState({ intervalId: intervalId });
+    }
+
     render() {
+        const div2Links = [
+            "Home",
+            "What we do",
+            "About",
+            "Blog",
+            "Careers",
+            "Contact"
+        ];
+
+        const div3Links = [
+            "Backend development",
+            "Frontend development",
+            "Mobile development",
+            "Web Design",
+            "Marketing & SEO",
+            "Business Consulting"
+        ];
+
         return (
             <footer className="footer">
                 <div className="footer__div--upper">
@@ -14,6 +51,9 @@ class Footer extends Component {
                         className="back-to-top"
                         src={require("../resources/icons/back-to-top.svg")}
                         alt="back-to-top"
+                        onClick={() => {
+                            this.scrollToTop();
+                        }}
                     />
                 </div>
                 <div className="footer__div--middle">
@@ -29,20 +69,18 @@ class Footer extends Component {
                         <h4>Bulevar Mihajla Pupina 422/5</h4>
                     </div>
                     <div className="div-2">
-                        <a href="#!">Home</a>
-                        <a href="#!">What we do</a>
-                        <a href="#!">About</a>
-                        <a href="#!">Blog</a>
-                        <a href="#!">Careers</a>
-                        <a href="#!">Contact</a>
+                        {div2Links.map((link) => (
+                            <a href="#!" key={link}>
+                                {link}
+                            </a>
+                        ))}
                     </div>
                     <div className="div-3">
-                        <a href="#!">Backend development</a>
-                        <a href="#!">Frontend development</a>
-                        <a href="#!">Mobile development</a>
-                        <a href="#!">Web Design</a>
-                        <a href="#!">Marketing & SEO</a>
-                        <a href="#!">Business Consulting</a>
+                        {div3Links.map((link) => (
+                            <a href="#!" key={link}>
+                                {link}
+                            </a>
+                        ))}
                     </div>
                     <div className="div-4">
                         <div className="icon-div">
