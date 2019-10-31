@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    padding: 2.5rem 3rem 0;
+    padding: 2.5rem 5.8rem 0 3rem;
     position: absolute;
     top: 0;
     display: flex;
@@ -8,7 +8,6 @@
     justify-content: space-between;
 
     @include respond(768) {
-
     }
 
     &__golux-logo {
@@ -16,6 +15,7 @@
     }
 
     &__nav {
+
         & * {
             cursor: pointer;
         }
@@ -28,7 +28,7 @@
             background-color: $color-white;
             color: $color-pink;
             font-size: 1.6rem;
-            font-family: 'ProximaNovaScOsf-Extrabold', sans-serif;
+            font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
             text-transform: uppercase;
 
             @include respond(480) {
@@ -49,9 +49,18 @@
         }
 
         .menu-btn {
-            height: 2.5rem;
-            position: relative;
-            top: 0.8rem;
+            position: fixed;
+            top: 3.4rem;
+            right: 3rem;
+            z-index: 100;
+            background-color: transparent;
+            outline: none;
+
+            img {
+                height: 2.5rem;
+                position: relative;
+                top: 0.8rem;
+            }
         }
     }
 }

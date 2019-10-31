@@ -1,7 +1,25 @@
 import React, { Component } from "react";
+import Menu from "./Menu";
+
+const menuIcon = {
+    open: require("../resources/icons/hamburger-menu.svg"),
+    exit: require("../resources/icons/hamburger-menu-exit.svg")
+};
 
 class Header extends Component {
+    state = {
+        menuShown: false
+    };
+
+    onMenuClick = () => {
+        this.setState({ menuShown: !this.state.menuShown });
+    };
+
+    getMenuIcon = () => this.state.menuShown ? "exit" : "open";
+
     render() {
+        const iconName = this.getMenuIcon();
+
         return (
             <header className="header">
                 <img
@@ -26,11 +44,13 @@ class Header extends Component {
                             d="M13.94,0a6.83,6.83,0,1,0,6.82,6.82A6.83,6.83,0,0,0,13.94,0Zm0,10.9A4.08,4.08,0,1,1,18,6.82,4.08,4.08,0,0,1,13.94,10.9Z"
                         />
                     </svg>
-                    <img
-                        className="menu-btn"
-                        src={require("../resources/icons/hamburger-menu.svg")}
-                        alt="Menu button"
-                    />
+                    <button onClick={this.onMenuClick} className="menu-btn">
+                        <img
+                            src={menuIcon[iconName]}
+                            alt="Menu button"
+                        />
+                    </button>
+                    {this.state.menuShown && <Menu />}
                 </nav>
             </header>
         );
