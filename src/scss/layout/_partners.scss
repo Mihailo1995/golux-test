@@ -1,0 +1,38 @@
+.partners {
+    padding: 7rem 0 5rem;
+    @include flexCenter;
+    flex-direction: column;
+
+    &__div {
+        margin-top: 5rem;
+        @include flexCenter;
+        flex-direction: column;
+
+        @include respond(480) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 16rem;
+            margin: 1.5rem 3.5rem;
+
+            @include respond(768) {
+                margin: 1.2rem 1.8rem;
+            }
+        }
+
+        .hex-3, .hex-2 {
+            width: 18rem;
+        }
+        
+        // .hex-3 {
+            
+        // }
+
+        // .hex-2 {
+
+        // }
+    }
+}

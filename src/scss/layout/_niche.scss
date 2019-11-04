@@ -1,0 +1,46 @@
+.niche {
+    padding: 6rem 0 11rem;
+    background-image: url("../resources/images/bg-niche-back.png");
+    background-size: cover;
+    @include flexCenter;
+
+    @include respond(1200) {
+        background-position: right;
+    }
+
+    @include respond(480) {
+        padding: 4rem 0 6rem;
+    }
+
+    &__div {
+        width: 44rem;
+        height: 52rem;
+        margin-left: 50rem;
+
+        @include respond(1200) {
+            margin-left: 0;
+        }
+
+        @include respond(480) {
+            width: 100%;
+            height: auto;
+            padding: 0 4rem;
+        }
+        
+        h2.h2-universal {
+            color: $color-white;
+            margin-bottom: 5rem;
+        }
+
+        p {
+            color: $color-white;
+            font-size: 1.8rem;
+            text-align: center;
+            line-height: 2;
+
+            strong {
+                font-family: 'AvenirNextLTPro-Bold';
+            }
+        }
+    }
+}

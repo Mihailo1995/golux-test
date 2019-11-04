@@ -1,0 +1,208 @@
+.programs {
+    padding: 12rem 25rem;
+
+    @include respond(1200) {
+        padding: 12rem;
+    }
+
+    @include respond(768) {
+        padding: 8rem 3rem;
+    }
+
+    @include respond(480) {
+        padding: 4rem 3rem;
+    }
+
+    &__p {
+        margin: 5rem 0 8rem;
+        padding: 0 7rem;
+        color: $color-jet;
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 2;
+
+        @include respond(480) {
+            padding: 0;
+        }
+    }
+
+    &__loyalty {
+        @include flexCenter;
+
+        @include respond(480) {
+            flex-direction: column;
+        }
+
+        div {
+            margin: 0 7rem;
+            @include flexCenter;
+            flex-direction: column;
+
+            @include respond(768) {
+                margin: 0 2rem;
+            }
+
+            @include respond(480) {
+                margin-bottom: 3rem;
+            }
+
+            img {
+                width: 16rem;
+                margin-bottom: 2rem;
+
+                @include respond(480) {
+                    width: 24rem;
+                }
+            }
+
+            h3 {
+                width: 12rem;
+                // height: 4rem;
+                margin: 3rem 0 2rem;
+                color: #555;
+                font-size: 2.2rem;
+                font-family: "ProximaNova-Extrabold", sans-serif;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include respond(480) {
+                    margin: 1rem 0 3rem;
+                }
+            }
+        }
+    }
+
+    .blog {
+        margin-top: 20rem;
+        @include flexCenter;
+        align-items: flex-start;
+
+        @include respond(1200) {
+            margin-top: 10rem;
+        }
+
+        @include respond(480) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__div-1 {
+            width: 40rem;
+
+            @include respond(480) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            h3 {
+                width: 20rem;
+                margin: 2.5rem;
+                font-size: 2.2rem;
+                font-family: "ProximaNova-Extrabold", sans-serif;
+                color: $color-jet;
+                line-height: 1.5;
+            }
+
+            .div-info {
+                padding: 0 2.5rem;
+                @include flexCenter;
+                justify-content: space-between;
+
+                .div-author {
+                    color: #cacaca;
+
+                    p {
+                        font-size: 1.3rem;
+                    }
+
+                    p:nth-of-type(2) {
+                        margin: 0.5rem 0 1.5rem;
+                    }
+                }
+
+                .div-icon {
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    border: 2px solid #cacaca;
+                }
+            }
+        }
+
+        &__div-2 {
+            width: 40rem;
+            margin-top: 4rem;
+            margin-left: 4rem;
+
+            @include respond(480) {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .rubric {
+                width: 100%;
+                @include flexCenter;
+
+                @include respond(480) {
+                    justify-content: flex-start;
+                }
+
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid $color-ash-gray;
+                }
+
+                .div-date {
+                    @include flexCenter;
+                    flex-direction: column;
+                    display: none;
+
+                    @include respond(480) {
+                        display: flex;
+                        align-self: flex-start;
+                        position: relative;
+                        top: 1.5rem;
+                    }
+
+                    h3 {
+                        font-size: 2.2rem;
+                        font-family: "ProximaNova-Extrabold", sans-serif;
+                        color: $color-jet;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        color: $color-ash-gray;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .div-headline {
+                    padding: 1rem;
+
+                    @include respond(480) {
+                        margin-left: 3rem;
+                    }
+
+                    h4 {
+                        font-size: 2.1rem;
+                        font-family: "ProximaNova-Extrabold", sans-serif;
+                        color: $color-blue;
+                        line-height: 1.6;
+                    }
+
+                    p {
+                        margin: 0.5rem 0 1.8rem;
+                        color: $color-jet;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,32 +1,36 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Menu from "./Menu";
 
 const menuIcon = {
-    open: require("../resources/icons/hamburger-menu.svg"),
-    exit: require("../resources/icons/hamburger-menu-exit.svg")
+    open: require("../../resources/icons/hamburger-menu.svg"),
+    exit: require("../../resources/icons/hamburger-menu-exit.svg")
 };
 
 class Header extends Component {
     state = {
-        menuShown: false
+        isMenuShown: false
     };
 
     onMenuClick = () => {
-        this.setState({ menuShown: !this.state.menuShown });
+        this.setState({ isMenuShown: !this.state.isMenuShown });
     };
 
-    getMenuIcon = () => this.state.menuShown ? "exit" : "open";
+    getMenuIcon = () => (this.state.isMenuShown ? "exit" : "open");
 
     render() {
+        const { helperClass } = this.props;
         const iconName = this.getMenuIcon();
 
         return (
-            <header className="header">
-                <img
-                    className="header__golux-logo"
-                    src={require("../resources/images/golux-logo.png")}
-                    alt="Golux logo"
-                />
+            <header className={`header ${helperClass}`}>
+                <Link to="/" className="link">
+                    <img
+                        className="header__golux-logo"
+                        src={require("../../resources/images/golux-logo.png")}
+                        alt="Golux logo"
+                    />
+                </Link>
                 <nav className="header__nav">
                     <button className="quote-btn">Get Quote</button>
                     <svg
@@ -45,12 +49,11 @@ class Header extends Component {
                         />
                     </svg>
                     <button onClick={this.onMenuClick} className="menu-btn">
-                        <img
-                            src={menuIcon[iconName]}
-                            alt="Menu button"
-                        />
+                        <img src={menuIcon[iconName]} alt="Menu button" />
                     </button>
-                    {this.state.menuShown && <Menu />}
+                    {this.state.isMenuShown && (
+                        <Menu isMenuShown={this.state.isMenuShown} />
+                    )}
                 </nav>
             </header>
         );

@@ -6,7 +6,7 @@ class Hero extends Component {
             <section className="hero">
                 <img
                     className="hero__phone"
-                    src={require("../resources/images/telefon-mockup.png")}
+                    src={require("../../resources/images/telefon-mockup.png")}
                     alt="telefon-mockup"
                 />
                 <div className="hero__div">

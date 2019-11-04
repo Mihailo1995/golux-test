@@ -7,7 +7,7 @@ class WeAre extends Component {
                 <div className="we-are__div-1">
                     <span className="h2-universal">We are</span>
                     <img
-                        src={require("../resources/images/golux-logo.png")}
+                        src={require("../../resources/images/golux-logo.png")}
                         alt="Golux logo"
                     />
                 </div>
@@ -22,7 +22,7 @@ class WeAre extends Component {
                     </p>
                     <div className="rectangle">
                         <img
-                            src={require("../resources/images/play.png")}
+                            src={require("../../resources/images/play.png")}
                             alt="play"
                         />
                     </div>

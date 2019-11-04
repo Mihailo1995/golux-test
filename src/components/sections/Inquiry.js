@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { featureData } from "../data/featureData";
-import Services from "./Services";
+import { featureData } from "../../data/featureData";
+import Services from "./utils/Services";
 
 class Inquiry extends Component {
     state = {
@@ -67,14 +67,14 @@ class Inquiry extends Component {
                             <div className="methods">
                                 <div className="group">
                                     <img
-                                        src={require("../resources/icons/choice-1.png")}
+                                        src={require("../../resources/icons/choice-1.png")}
                                         alt="choice-1"
                                     />
                                     <h4>Dedicated team</h4>
                                 </div>
                                 <div className="group">
                                     <img
-                                        src={require("../resources/icons/choice-2.png")}
+                                        src={require("../../resources/icons/choice-2.png")}
                                         alt="choice-2"
                                     />
                                     <h4>Project team</h4>

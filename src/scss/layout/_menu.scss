@@ -1,15 +1,20 @@
 .menu {
-    width: 40rem;
+    width: 38rem;
     height: 100vh;
     border-left: 1px solid $color-ash-gray;
     background: url("../resources/images/bg-dots.png");
     background-size: cover;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -40rem;
     z-index: 6;
     @include flexCenter;
     flex-direction: column;
+    transition: right 0.3s ease-in-out;
+
+    &.show {
+        right: 0;
+    }
 
     @include respond(768) {
         width: 100vw;

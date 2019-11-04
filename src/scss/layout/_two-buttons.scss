@@ -1,0 +1,56 @@
+.two-buttons {
+    padding: 7rem 0;
+    background-color: #f0f0f0;
+    @include flexCenter;
+
+    @include respond(768) {
+        flex-direction: column;
+    }
+
+    @include respond(480) {
+        padding: 4rem 0;
+    }
+
+    button {
+        width: 38rem;
+        height: 5rem;
+        border-radius: 0.5rem;
+        color: $color-white;
+        font-size: 1.9rem;
+        font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
+        text-transform: uppercase;
+        @include flexCenter;
+
+        @include respond(1200) {
+            width: 35rem;
+        }
+
+        img {
+            height: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+    .btn-clients {
+        margin-right: 7rem;
+        background-color: $color-blue;
+
+        @include respond(1200) {
+            margin-right: 3rem;
+        }
+
+        @include respond(768) {
+            order: 2;
+            margin-top: 2rem;
+            margin-right: 0;
+        }
+    }
+
+    .btn-download {
+        background-color: $color-pink;
+
+        @include respond(768) {
+            order: 1;
+        }
+    }
+}

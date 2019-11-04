@@ -3,7 +3,7 @@
     padding: 9rem 0;
     @include flexCenter;
 
-    @include respond(768) {
+    @include respond(1200) {
         padding: 4rem;
         flex-direction: column;
     }
@@ -11,7 +11,7 @@
     &__div {
         margin-right: 8rem;
 
-        @include respond(768) {
+        @include respond(1200) {
             margin: 0;
             order: 2;
             @include flexCenter;

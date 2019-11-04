@@ -44,12 +44,12 @@ class Footer extends Component {
                 <div className="footer__div--upper">
                     <img
                         className="golux-logo"
-                        src={require("../resources/images/golux-logo.png")}
+                        src={require("../../resources/images/golux-logo.png")}
                         alt="golux-logo"
                     />
                     <img
                         className="back-to-top"
-                        src={require("../resources/icons/back-to-top.svg")}
+                        src={require("../../resources/icons/back-to-top.svg")}
                         alt="back-to-top"
                         onClick={() => {
                             this.scrollToTop();
@@ -85,7 +85,7 @@ class Footer extends Component {
                     <div className="div-4">
                         <div className="icon-div">
                             <img
-                                src={require("../resources/icons/golux-club.svg")}
+                                src={require("../../resources/icons/golux-club.svg")}
                                 alt="golux-club"
                             />
                             <span>Golux club</span>
@@ -94,7 +94,7 @@ class Footer extends Component {
                         <button className="btn-join">Join</button>
                         <div className="icon-div">
                             <img
-                                src={require("../resources/icons/phone.svg")}
+                                src={require("../../resources/icons/phone.svg")}
                                 alt="phone"
                             />
                             <span>Get quote</span>
@@ -102,7 +102,7 @@ class Footer extends Component {
                         <button className="btn-book">Book a call</button>
                         <div className="icon-div">
                             <img
-                                src={require("../resources/icons/mail.svg")}
+                                src={require("../../resources/icons/mail.svg")}
                                 alt="mail"
                             />
                             <span>Newsletter</span>
@@ -123,11 +123,11 @@ class Footer extends Component {
                     </div>
                     <div className="div-icons">
                         <img
-                            src={require("../resources/icons/insta.svg")}
+                            src={require("../../resources/icons/insta.svg")}
                             alt="insta"
                         />
                         <img
-                            src={require("../resources/icons/linkedin.svg")}
+                            src={require("../../resources/icons/linkedin.svg")}
                             alt="linkedin"
                         />
                     </div>

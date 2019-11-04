@@ -1,0 +1,77 @@
+.download {
+    width: 100%;
+    padding: 20rem 0 8rem;
+    background-image: url("../resources/images/bg-dots-back.png");
+    background-size: cover;
+    @include flexCenter;
+
+    @include respond(768) {
+        padding: 15rem 0 4rem;
+        flex-direction: column;
+        background-image: url("../resources/images/bg-dots.png");
+        background-position: center;
+    }
+
+    img {
+        height: 32rem;
+        margin-right: 15rem;
+
+        @include respond(1200) {
+            margin-right: 6rem;
+        }
+
+        @include respond(768) {
+            margin-right: 0;
+            margin-bottom: 4rem;
+        }
+    }
+
+    div {
+        width: 44rem;
+        height: 36rem;
+        padding: 2rem 2rem 0;
+        border-radius: 2rem;
+        background-color: #f0f0f0;
+        @include flexCenter;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include respond(768) {
+            width: 100%;
+            background-color: transparent;
+        }
+
+        p {
+            color: $color-jet;
+            font-size: 1.3rem;
+            line-height: 2.7;
+
+            strong {
+                font-family: 'AvenirNextLTPro-Bold';
+            }
+        }
+
+        button {
+            width: 42rem;
+            height: 5rem;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+            background-color: $color-white;
+            color: $color-pink;
+            font-size: 2rem;
+            font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
+            text-transform: uppercase;
+            @include flexCenter;
+
+            @include respond(768) {
+                width: 100%;
+            }
+
+            svg {
+                height: 2.2rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+}

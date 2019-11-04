@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Features from "./Features";
-import { featureData } from "../data/featureData";
+import Features from "./utils/Features";
+import { featureData } from "../../data/featureData";
 
 class Lab extends Component {
     render() {

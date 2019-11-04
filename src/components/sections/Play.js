@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Choice from "./Choice";
+import Choice from "./utils/Choice";
 
 class Play extends Component {
     render() {
@@ -8,7 +8,7 @@ class Play extends Component {
                 <h2 className="h2-universal">Choose your play</h2>
                 <div className="play__div">
                     <Choice
-                        source={require("../resources/icons/choice-1.png")}
+                        source={require("../../resources/icons/choice-1.png")}
                         alt="choice-1"
                         h4_label="Dedicated teams"
                         text='We can assemble "your own Dedicated Team" which will
@@ -19,7 +19,7 @@ class Play extends Component {
                     />
                     <h3 className="h3-universal">or</h3>
                     <Choice
-                        source={require("../resources/icons/choice-2.png")}
+                        source={require("../../resources/icons/choice-2.png")}
                         alt="choice-2"
                         h4_label="Fixed price projects"
                         text='We can also help you carry your digital ideas to

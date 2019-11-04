@@ -19,7 +19,7 @@ class Subscribe extends Component {
                     </div>
                 </div>
                 <img
-                    src={require("../resources/images/subscribe.png")}
+                    src={require("../../resources/images/subscribe.png")}
                     alt="subscribe"
                 />
             </section>

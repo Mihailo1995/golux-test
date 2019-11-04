@@ -5,7 +5,7 @@ class Join extends Component {
         return (
             <section className="join">
                 <img
-                    src={require("../resources/images/golux-logo-white.png")}
+                    src={require("../../resources/images/golux-logo-white.png")}
                     alt="golux-logo-white"
                 />
                 <div>

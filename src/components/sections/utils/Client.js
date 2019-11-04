@@ -3,7 +3,7 @@ import React from "react";
 function Client({ text, name, title, company }) {
     return (
         <section>
-            <img src={require("../resources/images/nigga.png")} alt="person" />
+            <img src={require("../../../resources/images/nigga.png")} alt="person" />
             <p>
                 {text}
             </p>

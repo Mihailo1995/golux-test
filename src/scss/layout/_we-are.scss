@@ -1,7 +1,7 @@
 .we-are {
     padding: 10rem 0;
 
-    @include respond(768) {
+    @include respond(1200) {
         padding: 6rem 0 4rem;
     }
 
@@ -20,7 +20,7 @@
         margin-top: 8rem;
         @include flexCenter;
 
-        @include respond(768) {
+        @include respond(1200) {
             margin-top: 5rem;
             flex-direction: column;
         }
@@ -32,7 +32,7 @@
             font-size: 1.7rem;
             line-height: 2;
 
-            @include respond(768) {
+            @include respond(1200) {
                 width: 100%;
                 margin-right: 0;
                 padding: 2rem 2rem 0;

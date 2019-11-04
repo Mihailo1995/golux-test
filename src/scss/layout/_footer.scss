@@ -4,14 +4,14 @@
     background-color: #f0f0f0;
     color: $color-trolley-gray;
 
-    @include respond(768) {
+    @include respond(1200) {
         padding: 4rem 0rem 6rem;
         @include flexCenter;
         flex-direction: column;
     }
 
     & > * {
-        @include respond(768) {
+        @include respond(1200) {
             width: 60%;
             margin: 0 0 5rem;
         }
