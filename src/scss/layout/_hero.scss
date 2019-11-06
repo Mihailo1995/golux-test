@@ -39,6 +39,10 @@
         }
 
         @include respond(768) {
+            margin: 4rem 0 0 5rem;
+        }
+
+        @include respond(480) {
             margin: 4rem 0 0 0;
         }
 
