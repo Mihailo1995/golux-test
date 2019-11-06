@@ -71,11 +71,11 @@
 
     &__form {
         width: 62rem;
+        @include flexCenter;
+        flex-direction: column;
 
         @include respond(768) {
             width: 90%;
-            @include flexCenter;
-            flex-direction: column;
         }
 
         .shell-1 {
@@ -120,6 +120,30 @@
                     &:focus {
                         border-bottom: 2px solid #666;
                     }
+                }
+
+                .borderPink {
+                    border-bottom: 2px solid $color-pink;
+                }
+
+                .borderBlue {
+                    border-bottom: 2px solid #027cb2;
+                }
+
+                img.sign {
+                    height: 1.3rem;
+                    position: relative;
+                    top: -3.4rem;
+                    right: 1.5rem;
+                    align-self: flex-end;
+
+                }
+
+                .p-error {
+                    color: $color-ash-gray;
+                    align-self: flex-start;
+                    position: relative;
+                    top: -0.5rem;
                 }
             }
 
@@ -211,96 +235,95 @@
                 display: block;
             }
         }
-    }
 
-    .methods-services-div {
-        width: 74rem;
-        margin-top: 10rem;
-
-        @include respond(768) {
-            width: 90%;
-            margin-top: 4rem;
-        }
-
-        .helper-div {
-            display: flex;
-            justify-content: space-between;
-
+        .methods-services-div {
+            width: 74rem;
+            margin-top: 10rem;
+    
             @include respond(768) {
+                width: 90%;
+                margin-top: 4rem;
+            }
+    
+            .helper-div {
+                display: flex;
+                justify-content: space-between;
+    
+                @include respond(768) {
+                    @include flexCenter;
+                    flex-direction: column;
+                }
+            }
+    
+            h3 {
+                margin: 3rem 0 3.2rem;
+            }
+    
+            .group {
                 @include flexCenter;
                 flex-direction: column;
             }
-        }
-
-        h3 {
-            margin: 3rem 0 3.2rem;
-        }
-
-        .group {
-            @include flexCenter;
-            flex-direction: column;
-        }
-
-        img {
-            height: 11rem;
-        }
-
-        h4 {
-            width: 12rem;
-            margin: 1rem 0 3.5rem;
-            color: $color-trolley-gray;
-            font-size: 1.5rem;
-            font-family: 'AvenirNextLTPro-Regular', sans-serif;
-            text-align: center;
-        }
-
-        .methods {
-            @include respond(768) {
-                display: flex;
+    
+            img {
+                height: 11rem;
             }
-
-            .group:first-of-type {
+    
+            h4 {
+                width: 12rem;
+                margin: 1rem 0 3.5rem;
+                color: $color-trolley-gray;
+                font-size: 1.5rem;
+                font-family: 'AvenirNextLTPro-Regular', sans-serif;
+                text-align: center;
+            }
+    
+            .methods {
                 @include respond(768) {
-                    margin-right: 5rem;
+                    display: flex;
+                }
+    
+                .group:first-of-type {
+                    @include respond(768) {
+                        margin-right: 5rem;
+                    }
+                }
+    
+                .group img {
+                    @include respond(768) {
+                        height: 14rem;
+                    }
                 }
             }
-
-            .group img {
+    
+            .services {
+                display: grid;
+                grid-template-columns: repeat(3, 11rem);
+                grid-column-gap: 7rem;
+    
                 @include respond(768) {
-                    height: 14rem;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-column-gap: 2rem;
                 }
             }
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(3, 11rem);
-            grid-column-gap: 7rem;
-
-            @include respond(768) {
-                grid-template-columns: repeat(3, 1fr);
-                grid-column-gap: 2rem;
-            }
-        }
-
-        .send-btn {
-            width: 100%;
-            margin: 3rem 0 11rem;
-            height: 5rem;
-            border-radius: 0.5rem;
-            background-color: $color-pink;
-            color: $color-white;
-            font-size: 1.5rem;
-            font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
-            text-transform: uppercase;
-
-            @include respond(480) {
-                height: 8rem;
-                margin-bottom: 0;
-                border-radius: 0;
-                font-size: 2.2rem;
+    
+            .send-btn {
+                width: 100%;
+                margin: 3rem 0 11rem;
+                height: 5rem;
+                border-radius: 0.5rem;
+                background-color: $color-pink;
+                color: $color-white;
+                font-size: 1.5rem;
+                font-family: "ProximaNovaScOsf-Extrabold", sans-serif;
+                text-transform: uppercase;
+    
+                @include respond(480) {
+                    height: 6rem;
+                    margin-bottom: 3rem;
+                    // border-radius: 0;
+                    font-size: 2rem;
+                }
             }
         }
     }
-
 }
