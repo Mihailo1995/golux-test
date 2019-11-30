@@ -25,14 +25,11 @@
 
         .hex-3, .hex-2 {
             width: 18rem;
+            @include flexCenter;
+
+            @include respond(480) {
+                flex-direction: column;
+            }
         }
-        
-        // .hex-3 {
-            
-        // }
-
-        // .hex-2 {
-
-        // }
     }
 }
